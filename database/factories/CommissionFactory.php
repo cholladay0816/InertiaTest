@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Commission;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CommissionFactory extends Factory
@@ -22,7 +23,12 @@ class CommissionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => User::firstOrCreate()->id,
+            'title' => $this->faker->sentence(),
+            'description' => $this->faker->sentence(),
+            'memo' => $this->faker->sentence(),
+            'price' => 5,
+            'days_to_complete' => 7
         ];
     }
 }
