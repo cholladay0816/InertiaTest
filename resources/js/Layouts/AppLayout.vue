@@ -54,15 +54,15 @@
                                     Dashboard
                                 </inertia-link>
 
-                                <inertia-link href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                                    <!-- Heroicon name: users -->
-                                    <svg class="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                <inertia-link :href="route('notifications')" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                                    <!-- Heroicon name: bell -->
+                                    <svg class="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                                     </svg>
-                                    Team
+                                    Notifications
                                 </inertia-link>
 
-                                <inertia-link href="/commissions" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                                <inertia-link :href="route('commissions')" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
                                     <!-- Heroicon name: folder -->
                                     <svg class="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
@@ -130,7 +130,7 @@
                             </div>
                             <nav class="mt-5 flex-1 px-2 bg-gray-800 space-y-1">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <inertia-link href="/dashboard" class="bg-gray-900 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                                <inertia-link :href="route('dashboard')" :class="(route().current('dashboard')?'bg-gray-900 text-white ':'text-gray-300 hover:bg-gray-700 hover:text-white ') + 'group flex items-center px-2 py-2 text-sm font-medium rounded-md'">
                                     <!-- Current: "text-gray-300", Default: "text-gray-400 group-hover:text-gray-300" -->
                                     <!-- Heroicon name: home -->
                                     <svg class="text-gray-300 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -139,15 +139,16 @@
                                     Dashboard
                                 </inertia-link>
 
-                                <inertia-link href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                                    <!-- Heroicon name: users -->
-                                    <svg class="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                <inertia-link :href="route('notifications')" :class="(route().current('notifications')?'bg-gray-900 text-white ':'text-gray-300 hover:bg-gray-700 hover:text-white ') + 'group flex items-center px-2 py-2 text-sm font-medium rounded-md'">
+                                    <!-- Heroicon name: bell -->
+                                    <svg class="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                                     </svg>
-                                    Team
+                                    Notifications
                                 </inertia-link>
 
-                                <inertia-link href="/commissions" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                                <inertia-link
+                                    :href="route('commissions')" :class="(route().current('commissions')?'bg-gray-900 text-white ':'text-gray-300 hover:bg-gray-700 hover:text-white ') + 'group flex items-center px-2 py-2 text-sm font-medium rounded-md'">
                                     <!-- Heroicon name: folder -->
                                     <svg class="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
@@ -184,11 +185,11 @@
                             <inertia-link href="/user/profile" class="flex-shrink-0 w-full group block">
                                 <div class="flex items-center">
                                     <div>
-                                        <img class="inline-block h-9 w-9 rounded-full" :src="$page.user.profile_photo_url" alt="">
+                                        <img :src="$page.props.user.profile_photo_url" class="inline-block h-9 w-9 rounded-full" alt="">
                                     </div>
                                     <div class="ml-3">
                                         <p class="text-sm font-medium text-white">
-                                            {{ $page.user.name }}
+                                            {{$page.props.user.name}}
                                         </p>
                                         <p class="text-xs font-medium text-gray-300 group-hover:text-gray-200">
                                             View profile
@@ -211,11 +212,11 @@
                     </button>
                 </div>
                 <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabindex="0">
-                    <div class="py-6">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
+                    <div class="">
+                        <div class="mx-auto">
+                            <h1 class="text-2xl font-semibold text-gray-900"></h1>
                         </div>
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                        <div class="mx-auto ">
                             <slot></slot>
                         </div>
                     </div>
